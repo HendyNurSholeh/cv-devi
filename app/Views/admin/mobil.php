@@ -8,7 +8,7 @@
         <header class="mt-3">
             <div class="row justify-content-between">
                 <div class="col">
-                    <h2 class="text-start mb-3 fw-semibold text-hitamAbu fs-2 text-shadow">Daftar Mobil Tanki</h2>
+                    <h2 class="text-start mb-3 fw-semibold text-hitamAbu fs-2 text-shadow">Data Mobil Tanki</h2>
                 </div>
                 <div class="col">
                     <div class="text-end">

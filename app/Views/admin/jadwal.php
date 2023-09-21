@@ -1,20 +1,36 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_perusahaan.css" />
+<link rel="stylesheet" href="/css/admin/style_jadwal.css" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <div id="content" class="mx-5">
     <div class="container mb-5 mt-3 bg-white rounded-5 p-5 pt-3 shadow">
         <header class="mt-3">
+        </header>
+        <header class="mt-3">
             <div class="row justify-content-between">
-                <div class="col">
-                    <h2 class="text-start mb-3 fw-semibold text-hitamAbu fs-2 text-shadow">Data Perusahaan</h2>
-                </div>
-                <div class="col">
-                    <div class="text-end">
-                        <button type="button" class="btn-utama btn btn-success text-light fw-bolder"
-                            data-bs-toggle="modal" data-bs-target="#modalTambahAkun"><i class="bi bi-plus-lg"></i>Tambah
-                            Perusahaan</button>
+                <h2 class="text-center mb-3 fw-semibold text-hitamAbu fs-2 text-shadow"><i
+                        class="bi bi-clock-history"></i>Jadwal Pengiriman</h2>
+                <div class="col mt-2">
+                    <div class="d-flex align-items-center">
+                        <div class="col-4"></div>
+                        <div class="col-4">
+                            <form class="mb-3 text-center" id="date-form" action="" method="POST">
+                                <label for="tanggal fw-semibold text-secondary">Pilih Tanggal : </label>
+                                <input type="date" value="2023-05-05" max="" id="tanggal-awal" name="tanggal-awal"
+                                    class="inputTanggal" lang="id-ID" name="start-date" />
+                                <button class="ms-2 bg-white rounded-1 border-dark-subtle fs-09 px-2"
+                                    name="submit-date-form" type="submit">Filter</button>
+                            </form>
+                        </div>
+                        <div class="col-4">
+                            <div class="text-end mb-2">
+                                <button type="button" class="btn-utama btn btn-success text-light fw-bolder"
+                                    data-bs-toggle="modal" data-bs-target="#modalTambahAkun"><i
+                                        class="bi bi-plus-lg"></i>Tambah
+                                    Jadwal</button>
+                            </div>
+                        </div>
                     </div>
                     <!-- Modal Tambah Akun -->
                     <div class="modal fade" id="modalTambahAkun" tabindex="-1" aria-labelledby="modalTambahAkunLabel"
@@ -22,7 +38,7 @@
                         <div class="modal-dialog modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="modalTambahAkunLabel">Tambah Perusahaan</h5>
+                                    <h5 class="modal-title" id="modalTambahAkunLabel">Tambah Jadwal</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                         aria-label="Tutup"></button>
                                 </div>
@@ -74,22 +90,24 @@
         <table id="table" class="table table-striped shadow-sm table-bordered">
             <thead>
                 <tr>
-                    <th>Nama</th>
-                    <th>Peran Perusahaan</th>
-                    <th>Kontak Perusahaan</th>
-                    <th>Alamat</th>
-                    <th>Catatan</th>
+                    <th>Tanggal</th>
+                    <th>Truk</th>
+                    <th>Sopir</th>
+                    <th>Asal</th>
+                    <th>Tujuan</th>
+                    <th>Nomor Kontrak</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody>
                 <?php for($i=10; $i>=0; $i--) : ?>
                 <tr>
-                    <td>PT Tanjung TBK</td>
-                    <td>Pengirim</td>
-                    <td>083142301830</td>
-                    <td>Batu Licin</td>
-                    <td>-</td>
+                    <td>23 Juli 2023</td>
+                    <td>DA627338L</td>
+                    <td>Joko</td>
+                    <td>PT Smart TBK</td>
+                    <td>PT Berkah</td>
+                    <td>46BSE9O3K9K</td>
                     <td style="width:111px;">
                         <button type='button' class='btn border btn-success p-0 px-2 m-0' data-bs-toggle='modal'
                             data-bs-target='#detail'><i class="bi bi-info-circle"></i></button>
@@ -232,5 +250,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_perusahaan.js"></script>
+<script src="/js/admin/script_jadwal.js"></script>
 <?= self::endSection(); ?>
