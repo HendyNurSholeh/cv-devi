@@ -31,13 +31,10 @@
                         <label for="nama-produk" class="form-label">Truck<span class="text-danger">*</span></label>
                         <select class="form-select" id="nama-produk-pk" name="idProduk" required>
                             <option value="">Pilih Truck</option>
-                            <option value="" data-satuan="" data-harga="">Nursani</option>
-                            <option value="" data-satuan="" data-harga="">Udin</option>
-                            <option value="" data-satuan="" data-harga="">Mursalim</option>
-                            <option value="" data-satuan="" data-harga="">Suparmin</option>
-                            <option value="" data-satuan="" data-harga="">Didik Darmadi</option>
-                            <option value="" data-satuan="" data-harga="">Ely Marga Luter</option>
-                            <option value="" data-satuan="" data-harga="">Alfiannor</option>
+                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
+                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
+                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
+                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
                         </select>
                     </div>
                     <div class="mb-3">

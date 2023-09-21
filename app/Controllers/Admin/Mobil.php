@@ -3,13 +3,13 @@
 namespace App\Controllers\Admin;
 use App\Controllers\BaseController;
 
-class Home extends BaseController
+class Mobil extends BaseController
 {
     public function index(): string
     {
         $data = [
-            "title"=>"Home | CV. Devi"
+            "title"=>"Mobil Tanki | CV. Devi"
         ];
-        return view('admin/home', $data);
+        return view('admin/mobil', $data);
     }
 }

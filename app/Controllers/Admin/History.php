@@ -7,6 +7,9 @@ class History extends BaseController
 {
     public function index(): string
     {
-        return view('admin/history');
+        $data = [
+            "title"=>"Akun | CV. Devi"
+        ];
+        return view('admin/history', $data);
     }
 }

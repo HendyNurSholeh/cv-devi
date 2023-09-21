@@ -7,6 +7,9 @@ class ManajementAkun extends BaseController
 {
     public function index(): string
     {
-        return view('admin/manajement_akun');
+        $data = [
+            "title"=>"Manajement Akun | CV. Devi"
+        ];
+        return view('admin/manajement_akun', $data);
     }
 }

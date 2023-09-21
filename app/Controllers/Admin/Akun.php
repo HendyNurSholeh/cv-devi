@@ -7,6 +7,9 @@ class Akun extends BaseController
 {
     public function index(): string
     {
-        return view('admin/akun');
+        $data = [
+            "title"=>"Akun | CV. Devi"
+        ];
+        return view('admin/akun', $data);
     }
 }
