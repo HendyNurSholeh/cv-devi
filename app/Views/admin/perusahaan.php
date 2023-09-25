@@ -78,7 +78,6 @@
                     <th>Peran Perusahaan</th>
                     <th>Kontak Perusahaan</th>
                     <th>Alamat</th>
-                    <th>Catatan</th>
                     <th></th>
                 </tr>
             </thead>
@@ -89,7 +88,6 @@
                     <td>Pengirim</td>
                     <td>083142301830</td>
                     <td>Batu Licin</td>
-                    <td>-</td>
                     <td style="width:111px;">
                         <button type='button' class='btn border btn-success p-0 px-2 m-0' data-bs-toggle='modal'
                             data-bs-target='#detail'><i class="bi bi-info-circle"></i></button>

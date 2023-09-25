@@ -60,7 +60,13 @@
                     <li class="nav-item">
                         <div class="row me-4">
                             <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/kontrak"><i class="bi bi-envelope-check-fill"></i> Kontrak</a>
+                                href="/admin/kontrak"><i class="bi bi-clipboard-check-fill"></i> Kontrak</a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <div class="row me-4">
+                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
+                                href="/admin/kontrak"><i class="bi bi-envelope-check-fill"></i> Gaji</a>
                         </div>
                     </li>
                     <li class="nav-item">

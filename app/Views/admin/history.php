@@ -37,7 +37,7 @@
                     <div class="col-md-4">
                         <div class="card">
                             <div class="judul-total-fr card-header bg-primary fw-semibold text-white"><i
-                                    class="bi bi-basket2-fill"></i> Total Netto</div>
+                                    class="bi bi-bi-droplet-half"></i> Total Netto</div>
                             <div class="card-body">
                                 <span id="total-frozen-food">153.8297 Kg</span>
                             </div>

@@ -1,6 +1,6 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_jadwal.css" />
+<link rel="stylesheet" href="/css/admin/style_kontrak.css" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <div id="content" class="mx-5">
@@ -9,40 +9,18 @@
         </header>
         <header class="mt-3">
             <div class="row justify-content-between">
-                <h2 class="text-center mb-4 fw-semibold text-hitamAbu fs-2 text-shadow"><i
-                        class="bi bi-clock-history"></i>Jadwal Pengiriman</h2>
                 <div class="col mt-2">
-                    <div class="d-flex align-items-center">
-                        <div class="col">
-                            <form class="mb-3 d-flex" id="date-form" action="" method="POST">
-                                <label for="tanggal">Tanggal Awal : </label>
-                                <input type="date" value="2023-05-05" max="" id="tanggal-awal" name="tanggal-awal"
-                                    class="inputTanggal ms-2" lang="id-ID" name="start-date" />
-                                <label for="tanggal" class="ms-2">Tanggal Akhir : </label>
-                                <input type="date" value="2023-05-05" max="" id="tanggal-awal" name="tanggal-awal"
-                                    class="inputTanggal ms-2" lang="id-ID" name="start-date" />
-                                <label for="tanggal" class="ms-2">Kontrak : </label>
-                                <select id="nama-produk-pk" class="ms-2 me-1    " required>
-                                    <option value="">Semua Kontrak</option>
-                                    <option value="" data-satuan="" data-harga="">PT Smart - 16</option>
-                                    <option value="" data-satuan="" data-harga="">PT Kabodia TBK - 02</option>
-                                    <option value="" data-satuan="" data-harga="">PT Berkah Mandiri - 12</option>
-                                    <option value="" data-satuan="" data-harga="">PT GMK - 23</option>
-                                </select>
-                                <button class="ms-2 bg-white rounded-1 border-dark-subtle fs-09 px-2"
-                                    name="submit-date-form" type="submit">Filter</button>
-                            </form>
-                        </div>
-                        <div class="col-2">
-                            <div class="text-end mb-2">
-                                <button type="button" class="btn-utama btn btn-success text-light fw-bolder"
-                                    data-bs-toggle="modal" data-bs-target="#tambahJadwal"><i
-                                        class="bi bi-plus-lg"></i>Tambah
-                                    Jadwal</button>
-                            </div>
-                        </div>
+                    <div class="d-flex align-items-center mb-4 justify-content-evenly">
+                        <button type="button" class="btn btn-danger text-light fw-bolder" data-bs-toggle="modal"
+                            data-bs-target="#"><i class="bi bi-x-octagon-fill"></i> Tutup Kontrak</button>
+                        <button type="button" class="btn btn-primary text-light fw-bolder" data-bs-toggle="modal"
+                            data-bs-target="#"><i class="bi bi-printer-fill"></i> Cetak
+                            Tonase Angkut</button>
+                        <button type="button" class="btn-utama btn btn-success text-light fw-bolder"
+                            data-bs-toggle="modal" data-bs-target="#tambahJadwal"><i class="bi bi-plus-lg"></i>Tambah
+                            Kontrak</button>
                     </div>
-                    <div class="row mb-2 mt-2">
+                    <div class="row mb-2 ms-4">
                         <div class="col-md-4">
                             <div class="rounded-pill mx-2 shadow-sm row rounded bg-white px-1 overflow-hidden">
                                 <div
@@ -50,8 +28,8 @@
                                     <i class="bi bi-cart-plus-fill fw-bolder fs-1"></i>
                                 </div>
                                 <div class="col-9 bg-white text-dark-emphasis">
-                                    <h6 class="fw-bold mt-2">Pengiriman Terjadwal</h6>
-                                    <span id="total-harga" class="fs-4 fw-bold">2</span>
+                                    <h6 class="fw-bold mt-2">Total Kontrak</h6>
+                                    <span id="total-harga" class="fs-4 fw-bold">11</span>
                                 </div>
                             </div>
                         </div>
@@ -62,8 +40,8 @@
                                     <i class="bi bi-cart-check-fill fw-bolder fs-1"></i>
                                 </div>
                                 <div class="col-9 bg-white text-dark-emphasis">
-                                    <h6 class="fw-bold mt-2">Pengiriman Selesai</h6>
-                                    <span id="total-harga" class="fs-4 fw-bold">2</span>
+                                    <h6 class="fw-bold mt-2">Kontrak Berjalan</h6>
+                                    <span id="total-harga" class="fs-4 fw-bold">9</span>
                                 </div>
                             </div>
                         </div>
@@ -189,16 +167,18 @@
                 </div>
             </div>
         </header>
-        <div class="bg-white p-3 rounded-lg mt-2 shadow-sm">
+        <h2 class="mb-0 mt-3 fw-semibold text-oren fs-2 text-shadow"><i class="bi bi-clipboard-check-fill"></i> Daftar
+            Kontrak</h2>
+        <div class="bg-white p-3 rounded-lg mt-0 shadow-sm">
             <table id="table" class="table table-striped shadow-sm table-bordered">
                 <thead>
                     <tr>
-                        <th>Tanggal</th>
-                        <th>Truk</th>
-                        <th>Sopir</th>
+                        <th>Nomor</th>
+                        <th>Nama</th>
                         <th>Asal</th>
                         <th>Tujuan</th>
-                        <th>Nama Kontrak</th>
+                        <th>Jumlah Minyak</th>
+                        <th>Jumlah Terkirim</th>
                         <th>Status</th>
                         <th></th>
                     </tr>
@@ -206,13 +186,13 @@
                 <tbody>
                     <?php for($i=10; $i>=0; $i--) : ?>
                     <tr>
-                        <td>23 Juli 2023</td>
-                        <td>DA627338L</td>
-                        <td>Joko</td>
+                        <td>465789IA89K</td>
+                        <td>PT Candi TBK - 54</td>
                         <td>PT Smart TBK</td>
                         <td>PT Berkah</td>
-                        <td>PT Smart - 45</td>
-                        <td class="fw-bold text-success">Terjadwal</td>
+                        <td>97.500.000 Kg</td>
+                        <td>67.789.890 Kg</td>
+                        <td class="fw-bold text-success">Berjalan</td>
                         <td style="width:111px;">
                             <button type='button' class='btn border btn-success p-0 px-2 m-0' data-bs-toggle='modal'
                                 data-bs-target='#detail'><i class="bi bi-info-circle"></i></button>
@@ -359,5 +339,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_jadwal.js"></script>
+<script src="/js/admin/script_kontrak.js"></script>
 <?= self::endSection(); ?>

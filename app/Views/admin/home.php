@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="/css/admin/style_home.css" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
-<!-- Modal Produk Keluar -->
+<!-- Modal Verifikasi pengiriman -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
     aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -14,6 +14,12 @@
             </div>
             <div class="modal-body text-start">
                 <form action="" method="POST">
+                    <div class="mb-3">
+                        <label for="tanggal-pengiriman" class="form-label">Tanggal Pengiriman <span
+                                class="text-danger">*</span></label>
+                        <input type="date" class="form-control tanggal" name="tanggal-pengiriman" value="2023/09/27"
+                            required />
+                    </div>
                     <div class="mb-3">
                         <label for="nama-produk" class="form-label">Nama Sopir<span class="text-danger">*</span></label>
                         <select class="form-select" id="nama-produk-pk" name="idProduk" required>
@@ -28,14 +34,21 @@
                         </select>
                     </div>
                     <div class="mb-3">
-                        <label for="nama-produk" class="form-label">Truck<span class="text-danger">*</span></label>
-                        <select class="form-select" id="nama-produk-pk" name="idProduk" required>
-                            <option value="">Pilih Truck</option>
-                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
-                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
-                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
-                            <option value="" data-satuan="" data-harga="">DA8830LB</option>
-                        </select>
+                        <label for="mobil" class="form-label">Truck: </label>
+                        <input type="text" class="form-control" id="satuan-pk" value="DA44657L" placeholder="Kg"
+                            disabled />
+                    </div>
+                    <div class="row gap-2">
+                        <div class="col mb-3 me-0 pe-0">
+                            <label for="mobil" class="form-label">Asal: </label>
+                            <input type="text" class="form-control" id="satuan-pk" value="PT SMART" placeholder="Kg"
+                                disabled />
+                        </div>
+                        <div class="col mb-3 ms-0 ps-0">
+                            <label for="mobil" class="form-label">Tujuan: </label>
+                            <input type="text" class="form-control" id="satuan-pk" value="PT TANJUNG" placeholder="Kg"
+                                disabled />
+                        </div>
                     </div>
                     <div class="mb-3">
                         <label for="jumlah" class="form-label">Total Bruto <span class="text-danger">*</span></label>
@@ -65,15 +78,10 @@
                         </div>
                     </div>
                     <div class="mb-3">
-                        <label for="harga-terjual" class="form-label">Harga Terjual <span
+                        <label for="bukti-pengiriman" class="form-label">Bukti pengiriman <span
                                 class="text-danger">*</span></label>
-                        <input type="number" class="form-control" id="harga-terjual" name="harga-terjual" min="0"
+                        <input type="file" class="form-control" id="bukti-pengiriman" name="bukti-pengiriman" min="0"
                             value="0" step="0.01" required />
-                    </div>
-                    <div class="mb-3">
-                        <label for="tanggal-keluar" class="form-label">Tanggal Keluar <span
-                                class="text-danger">*</span></label>
-                        <input type="date" class="form-control tanggal" name="tanggal-keluar" required />
                     </div>
                     <div class="mb-3">
                         <label for="catatan" class="form-label">Catatan</label>
@@ -99,21 +107,21 @@
                 <div class="row gap-4">
                     <div class="con-child-top bg-white rounded-5 p-3 shadow-sm text-center">
                         <i style="padding-block: 5px; padding-inline: 7px"
-                            class="rounded-circle bg-warning bi bi-coin text-white fs-2"></i>
+                            class="rounded-circle bg-warning bi bi-droplet-half text-white fs-2"></i>
                         <h6 class="fw-semibold ps-2 mb-0 mt-2">Perkiraan Berat Netto</h6>
                         <p class="fs-3 m-0 fw-semibold">10500 Kg</p>
                     </div>
                     <div class="con-child-top bg-white rounded-5 p-3 shadow-sm text-center">
                         <i style="padding-block: 5px; padding-inline: 7px"
                             class="rounded-circle bg-danger bi bi-cart-plus-fill text-white fs-2"></i>
-                        <h6 class="fw-bolder ps-2 mb-0 mt-2">Jumlah Pengiriman</h6>
+                        <h6 class="fw-bolder ps-2 mb-0 mt-2">Pengiriman Hari Ini</h6>
                         <p class="fs-3 m-0 fw-semibold">2</p>
                     </div>
                     <div class="con-child-top bg-white rounded-5 p-3 shadow-sm text-center">
                         <i style="padding-block: 5px; padding-inline: 7px"
                             class="rounded-circle bg-primary bi bi-cart-check-fill text-white fs-2"></i>
                         <h6 class="fw-bolder ps-2 mb-0 mt-2">Pengiriman selesai</h6>
-                        <p class="fs-3 m-0 fw-semibold">5</p>
+                        <p class="fs-3 m-0 fw-semibold">1</p>
                     </div>
                 </div>
             </div>
@@ -184,36 +192,9 @@
             </table>
         </div>
     </div>
-    <!-- Modal Details Apel-->
+    <!-- Modal Details -->
     <div class="modal fade" id="detail1" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="productModalLabel">Profil Sopir</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <div class="col-md-6 gambar-produk" style="background-image: url('images/truk.jpg')"></div>
-                        <div class="col-md-6">
-                            <h2>Nursani</h2>
-                            <p><strong>Truck: </strong>DA8830LB</p>
-                            <p><strong>Asal: </strong>PT Smart Tarjun</p>
-                            <p><strong>Tujuan: </strong>PT Berkah Mulia</p>
-                            <p><strong>Perkiraan Berat Netto: </strong>8,240 Kg</p>
-                            <p><strong>Catatan: </strong>-</p>
-                            <p><strong>Tanggal: </strong>18 Mei 2024</p>
-                            <p><strong>Status Pengiriman: </strong><span class="text-danger fw-bold">Dalam
-                                    Perjalanan</span></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Modal Details Frozen Food-->
-    <div class="modal fade" id="detail2" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="productModalLabel">Detail Pengiriman</h5>
@@ -221,17 +202,55 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col-md-6 gambar-produk" style="background-image: url('images/sopir.jpg')"></div>
-                        <div class="col-md-6">
+                        <div class="col d-flex flex-column gap-0 justify-content-center align-items-center"
+                            style="background-color: #fefe">
+                            <h6><strong>Status Pengiriman: </strong></h6>
+                            <h4><span class="text-danger fw-bold">Belum
+                                    Selesai</span></h4>
+                        </div>
+                        <div class="col-5">
+                            <h2>Nursani</h2>
+                            <p><strong>Truck: </strong>DA8830LB</p>
+                            <p><strong>Nama Kontrak: </strong>PT Smart-16</p>
+                            <p><strong>Nomor Kontrak: </strong>DUIHBDJKDHU78K</p>
+                            <p><strong>Asal: </strong>PT Smart Tarjun</p>
+                            <p><strong>Tujuan: </strong>PT Berkah Mulia</p>
+                            <p><strong>Tanggal Pengiriman: </strong>18 Mei 2024</p>
+                            <p><strong>Perkiraan Berat Netto: </strong>8,240 Kg</p>
+                            <p><strong>Perkiraan Berat Tarra: </strong>3,200 Kg</p>
+                            <p><strong>Perkiraan Berat Bruto: </strong>11,440 Kg</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Details 2-->
+    <div class="modal fade" id="detail2" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-xl">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="productModalLabel">Detail Pengiriman</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col gambar-produk" style="background-image: url('/images/bukti1.jpeg')">
+                            <a href="" class="btn btn-success"><i class="bi bi-download"></i> Download Bukti
+                                Pengiriman</a>
+                        </div>
+                        <div class="col-5">
                             <h2>Udin</h2>
                             <p><strong>Truck: </strong>DA8830LB</p>
+                            <p><strong>Nama Kontrak: </strong>PT Smart-16</p>
+                            <p><strong>Nomor Kontrak: </strong>JSJOIDUJB9L</p>
                             <p><strong>Asal: </strong>PT Candi TBK</p>
                             <p><strong>Tujuan: </strong>PT Surya Bersama</p>
                             <p><strong>Total Bruto: </strong>12,230 Kg</p>
                             <p><strong>Total Tarra: </strong>3,990 Kg</p>
                             <p><strong>Total Netto: </strong>8,240 Kg</p>
                             <p><strong>Catatan: </strong>-</p>
-                            <p><strong>Tanggal: </strong>18 Mei 2024</p>
+                            <p><strong>Tanggal Pengiriman: </strong>18 Mei 2024</p>
                             <p><strong>Status Pengiriman: </strong><span class="text-success fw-bold">Selesai</span>
                             </p>
                         </div>
