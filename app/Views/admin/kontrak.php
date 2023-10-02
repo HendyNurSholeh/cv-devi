@@ -191,7 +191,7 @@
                         <td>PT Smart TBK</td>
                         <td>PT Berkah</td>
                         <td>97.500.000 Kg</td>
-                        <td>67.789.890 Kg</td>
+                        <td><i class="bi bi-arrow-up-short fw-bold text-success"></i>67.789.890 Kg</td>
                         <td class="fw-bold text-success">Berjalan</td>
                         <td style="width:111px;">
                             <button type='button' class='btn border btn-success p-0 px-2 m-0' data-bs-toggle='modal'

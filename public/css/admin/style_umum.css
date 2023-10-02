@@ -59,6 +59,10 @@ img {
   transform: scale(1.1);
 }
 
+.sub-data:active {
+  background-color: orange;
+}
+
 .nav-link {
   border: solid 1px rgba(255, 193, 7, 0);
   color: #6c757d;

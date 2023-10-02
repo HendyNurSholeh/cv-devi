@@ -47,12 +47,13 @@
                                 Data
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item fw-semibold text-secondary"
+                                <li><a class="dropdown-item fw-semibold sub-data text-secondary"
                                         href="/admin/perusahaan">Perusahaan</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item fw-semibold text-secondary" href="/admin/mobil">Mobil</a>
+                                <li><a class="dropdown-item fw-semibold sub-data text-secondary"
+                                        href="/admin/mobil">Mobil</a>
                                 </li>
                             </ul>
                         </div>
@@ -66,7 +67,7 @@
                     <li class="nav-item">
                         <div class="row me-4">
                             <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/kontrak"><i class="bi bi-envelope-check-fill"></i> Gaji</a>
+                                href="/admin/gaji"><i class="bi bi-envelope-check-fill"></i> Gaji</a>
                         </div>
                     </li>
                     <li class="nav-item">
