@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="/admin/manajement-akun"]').classList.add("aktif");
+document.querySelector('.manajement-akun').classList.add("aktif");
 // mengatur tables
 $(document).ready(function () {
   $("#table").DataTable({

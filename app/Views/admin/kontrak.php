@@ -1,6 +1,6 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_kontrak.css" />
+<link rel="stylesheet" href="<?=base_url('/css/admin/style_kontrak.css')?>" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <div id="content" class="mx-5">
@@ -339,5 +339,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_kontrak.js"></script>
+<script src="<?= base_url('/js/admin/script_kontrak.js') ?>"></script>
 <?= self::endSection(); ?>

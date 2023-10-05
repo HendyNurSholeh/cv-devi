@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="/admin/gaji"]').classList.add("aktif");
+document.querySelector('.gaji').classList.add("aktif");
 // mengatur tables
 $(document).ready(function () {
   $("#table").DataTable({

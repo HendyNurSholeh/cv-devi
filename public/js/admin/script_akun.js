@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="/admin/akun"]').classList.add("aktif");
+document.querySelector('.akun').classList.add("aktif");
 const formProfil = document.querySelector("#form-profil");
 const btnEditProfil = document.querySelector("#edit-profil");
 const btnSimpanPerubahan = document.querySelector("#simpan-perubahan");
