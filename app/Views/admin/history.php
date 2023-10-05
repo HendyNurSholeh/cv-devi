@@ -1,6 +1,6 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_history.css" />
+<link rel="stylesheet" href="<?=base_url('/css/admin/style_history.css')?>" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <!-- content -->
@@ -117,5 +117,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_history.js"></script>
+<script src="<?= base_url('/js/admin/script_history.js') ?>"></script>
 <?= self::endSection(); ?>

@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="/admin/kontrak"]').classList.add("aktif");
+document.querySelector('.kontrak').classList.add("aktif");
 // mengatur tables
 $(document).ready(function () {
   $("#table").DataTable({

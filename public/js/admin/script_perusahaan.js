@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="#"]').classList.add("aktif");
+document.querySelector('.perusahaan').classList.add("aktif");
 // mengatur tables
 $(document).ready(function () {
   $("#table").DataTable({

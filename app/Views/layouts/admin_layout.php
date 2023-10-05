@@ -10,7 +10,7 @@
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
     <!-- css -->
-    <link rel="stylesheet" href="/css/admin/style_umum.css">
+    <link rel="stylesheet" href="<?= base_url('/css/admin/style_umum.css') ?>">
     <?= self::renderSection('css');?>
     <!-- DataTables CSS -->
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
@@ -29,63 +29,63 @@
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/home"><i class="bi bi-house-door-fill"></i> Home</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 home" aria-current="page"
+                                href="<?=base_url('/admin/home')?>"><i class="bi bi-house-door-fill"></i> Home</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/jadwal"><i class="bi bi-calendar3"></i> Jadwal</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 jadwal" aria-current="page"
+                                href="<?=base_url('/admin/jadwal')?>"><i class="bi bi-calendar3"></i> Jadwal</a>
                         </div>
                     </li>
                     <li class="nav-item dropdown">
                         <div class="row me-4">
-                            <a class="nav-link dropdown-toggle click-oren fw-semibold p-2 px-3" href="#" role="button"
+                            <a class="nav-link dropdown-toggle click-oren fw-semibold p-2 px-3 perusahaan mobil" href="#" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="bi bi-bag-check-fill"></i>
                                 Data
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item fw-semibold sub-data text-secondary"
-                                        href="/admin/perusahaan">Perusahaan</a></li>
+                                        href="<?=base_url('/admin/perusahaan')?>">Perusahaan</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
                                 <li><a class="dropdown-item fw-semibold sub-data text-secondary"
-                                        href="/admin/mobil">Mobil</a>
+                                        href="<?=base_url('/admin/mobil')?>">Mobil</a>
                                 </li>
                             </ul>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/kontrak"><i class="bi bi-clipboard-check-fill"></i> Kontrak</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 kontrak" aria-current="page"
+                                href="<?=base_url('/admin/kontrak')?>"><i class="bi bi-clipboard-check-fill"></i> Kontrak</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/gaji"><i class="bi bi-envelope-check-fill"></i> Gaji</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 gaji" aria-current="page"
+                                href="<?=base_url('/admin/gaji')?>"><i class="bi bi-envelope-check-fill"></i> Gaji</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/history"><i class="bi bi-stopwatch-fill"></i> History</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 history" aria-current="page"
+                                href="<?=base_url('/admin/history')?>"><i class="bi bi-stopwatch-fill"></i> History</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row me-4">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/manajement-akun"><i class="bi bi-person-square"></i> Manajement Akun</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 manajement-akun" aria-current="page"
+                                href="<?=base_url('/admin/manajement-akun')?>"><i class="bi bi-person-square"></i> Manajement Akun</a>
                         </div>
                     </li>
                     <li class="nav-item">
                         <div class="row">
-                            <a class="nav-link click-oren fw-semibold p-2 px-3" aria-current="page"
-                                href="/admin/akun"><i class="bi bi-person-circle"></i> Akun</a>
+                            <a class="nav-link click-oren fw-semibold p-2 px-3 akun" aria-current="page"
+                                href="<?=base_url('/admin/akun')?>"><i class="bi bi-person-circle"></i> Akun</a>
                         </div>
                     </li>
                 </ul>
@@ -103,7 +103,7 @@
     <!-- DataTables JS -->
     <script src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/1.11.3/js/dataTables.bootstrap5.min.js"></script>
-    <script src="/js/admin/script_umum.js"></script>
+    <script src="<?= base_url('/js/admin/script_umum.js')?>"></script>
     <?= self::renderSection('js');?>
 </body>
 

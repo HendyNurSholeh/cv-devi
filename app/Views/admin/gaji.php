@@ -1,6 +1,6 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_gaji.css" />
+<link rel="stylesheet" href="<?=base_url('/css/admin/style_gaji.css')?>" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <div id="content" class="mx-5">
@@ -323,5 +323,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_gaji.js"></script>
+<script src="<?= base_url('/js/admin/script_gaji.js') ?>"></script>
 <?= self::endSection(); ?>

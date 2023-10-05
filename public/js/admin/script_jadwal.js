@@ -1,4 +1,4 @@
-document.querySelector('a.nav-link[href="/admin/jadwal"]').classList.add("aktif");
+document.querySelector(".jadwal").classList.add("aktif");
 // mengatur tables
 $(document).ready(function () {
   $("#table").DataTable({

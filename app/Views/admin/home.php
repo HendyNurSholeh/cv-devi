@@ -1,6 +1,6 @@
 <?= self::extend('layouts/admin_layout'); ?>
 <?= self::section('css'); ?>
-<link rel="stylesheet" href="/css/admin/style_home.css" />
+<link rel="stylesheet" href="<?= base_url('/css/admin/style_home.css')?>" />
 <?= self::endSection(); ?>
 <?= self::section('content'); ?>
 <!-- Modal Verifikasi pengiriman -->
@@ -235,7 +235,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <div class="col gambar-produk" style="background-image: url('/images/bukti1.jpeg')">
+                        <div class="col gambar-produk" style="background-image: url('<?=base_url('/images/bukti1.jpeg')?>')">
                             <a href="" class="btn btn-success"><i class="bi bi-download"></i> Download Bukti
                                 Pengiriman</a>
                         </div>
@@ -262,5 +262,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_home.js"></script>
+<script src="<?= base_url('/js/admin/script_home.js') ?>"></script>
 <?= self::endSection(); ?>

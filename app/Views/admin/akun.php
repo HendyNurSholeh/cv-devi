@@ -94,5 +94,5 @@
 </div>
 <?= self::endSection(); ?>
 <?= self::section('js'); ?>
-<script src="/js/admin/script_akun.js"></script>
+<script src="<?= base_url('/js/admin/script_akun.js') ?>"></script>
 <?= self::endSection(); ?>
