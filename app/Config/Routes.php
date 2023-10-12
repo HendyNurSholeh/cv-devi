@@ -15,3 +15,4 @@ $routes->get('/admin/gaji', 'Admin\Gaji::index');
 $routes->get('/admin/history', 'Admin\History::index');
 $routes->get('/admin/manajement-akun', 'Admin\ManajementAkun::index');
 $routes->get('/admin/akun', 'Admin\Akun::index');
+$routes->get('/admin/login', 'Admin\Login::index');
